@@ -1,0 +1,66 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #f4f4f4;
+}
+
+.Container{
+    display: flex;
+    overflow-y: auto;
+}
+.blog_card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    min-width: 400px;
+    height: 300px;
+}
+
+.blog_card:hover{
+    background-color: dimgrey;
+    color: white;
+}
+
+.blog_card h2 {
+    line-height: 26px;
+    font-size: 20px;
+    margin-bottom: 10px;
+    min-height: 80px;
+}
+.blog_card h2:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+.blog_card p {
+    flex-grow: 1; /* Make the body take up remaining vertical space */
+    height: 70px;
+}
+
+
+.blog_card p:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+
+.delete_btn {
+    background-color: #e74c3c;
+    color: #fff;
+    border: none;
+    padding: 8px;
+    cursor: pointer;
+    border-radius: 4px;
+    margin: 12px 0 0;
+}
+
+.delete_btn:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
