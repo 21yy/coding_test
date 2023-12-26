@@ -9,9 +9,12 @@ body {
 }
 
 .Container{
+    margin-left: 20px;
+    justify-content: center;
     display: flex;
-    overflow-y: auto;
+    gap: 20px;
 }
+
 .blog_card {
     background-color: #fff;
     border: 1px solid #ddd;
@@ -19,8 +22,9 @@ body {
     margin: 10px;
     padding: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    min-width: 400px;
-    height: 300px;
+    width: 400px;
+    height: 250px;
+    overflow-x: auto;
 }
 
 .blog_card:hover{
@@ -32,15 +36,26 @@ body {
     line-height: 26px;
     font-size: 20px;
     margin-bottom: 10px;
-    min-height: 80px;
+    height: 80px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis; /* Truncate title content */
 }
+
 .blog_card h2:hover{
     text-decoration: underline;
     cursor: pointer;
 }
+
 .blog_card p {
     flex-grow: 1; /* Make the body take up remaining vertical space */
-    height: 70px;
+    height: 60px;
+    overflow: hidden;
+    text-overflow: ellipsis;/* Truncate title content */
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    
 }
 
 
@@ -57,10 +72,36 @@ body {
     padding: 8px;
     cursor: pointer;
     border-radius: 4px;
-    margin: 12px 0 0;
+    margin: 5px 0 0;
 }
 
 .delete_btn:hover{
     text-decoration: underline;
     cursor: pointer;
 }
+
+#pagination-container {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    display: flex;
+    align-items: center;
+}
+
+
+button {
+    padding: 8px;
+    margin: 0 5px;
+    cursor: pointer;
+    border: none;
+    background-color: #3498db;
+    color: #fff;
+    border-radius: 4px;
+}
+
+button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+
